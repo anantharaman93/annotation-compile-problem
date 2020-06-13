@@ -1,0 +1,14 @@
+plugins {
+    id 'java-library'
+}
+
+ext {
+    autoValueServiceVersion = '1.0-rc7'
+}
+
+dependencies {
+    implementation project(':model-annotation')
+
+    compileOnly "com.google.auto.service:auto-service-annotations:${autoValueServiceVersion}"
+    annotationProcessor "com.google.auto.service:auto-service:${autoValueServiceVersion}"
+}

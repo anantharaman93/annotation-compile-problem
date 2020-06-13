@@ -1,0 +1,10 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation project(':model-annotation')
+    annotationProcessor project(':model-generator')
+
+    annotationProcessor fileTree(dir: '../model-generator/build/libs/', includes: ['*.jar'])
+}
